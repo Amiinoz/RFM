@@ -17,7 +17,7 @@ ${normalize}
 }
 
 html {
-	box-sising: border-box;
+	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	font-size: 16px;
 }
@@ -44,11 +44,13 @@ const Layout = ({ children }) => {
   const darkTheme = {
     background: "#000",
     text: "#fff",
+    red: "#ea291e",
   };
 
   const lightTheme = {
     background: "#fff",
     text: "#000",
+    red: "#ea291e",
   };
 
   return (

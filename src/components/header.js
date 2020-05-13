@@ -1,6 +1,7 @@
 // rafce
 // # 2
 import React from "react";
+import { Link } from "gatsby";
 
 // styled components
 import { HeaderNav, Logo, Menu } from "../styles/headerStyles";
@@ -10,10 +11,15 @@ const Header = () => {
   return (
     <HeaderNav>
       <Container>
-        <Flex spacebetween noHeight>
-          <Logo>Logo</Logo>
+        <Flex spaceBetween noHeight>
+          <Logo>
+            <Link to="/">Mo</Link>
+            <span></span>
+            <Link to="/">Magan</Link>
+          </Logo>
           <Menu>
             <button>
+              <span></span>
               <span></span>
               <span></span>
             </button>
