@@ -1,1 +1,5 @@
 start part2 - 20min
+
+
+1. Read more further
+	State manegement with Context API and hooks
