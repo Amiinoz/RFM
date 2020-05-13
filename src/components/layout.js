@@ -1,6 +1,31 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+// Start Here 1.
+// styled components
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { normalize } from "styled-normalize";
+
+const GlobalStyle = createGlobalStyle`
+${normalize}
+* {
+	text-decoration:none;
+	// curson: none;
+}
+
+html {
+	box-sising: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;
+}
+
+body {
+	font-family: -apple-stytem, BlinkMacSytemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvatica Neue', sans-serif;
+	background:${(props) => props.theme.background};
+	overscroll-behavior: none;
+	overflow-x: hidden
+}
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -11,13 +36,28 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
-  return <main>{children}</main>
-}
+  const darkTheme = {
+    background: "#000",
+    text: "#fff",
+  };
+
+  const lightTheme = {
+    background: "#fff",
+    text: "#000",
+  };
+
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <GlobalStyle />
+      <main>{children}</main>
+    </ThemeProvider>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
