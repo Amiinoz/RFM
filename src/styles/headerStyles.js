@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const HeaderNav = styled.div`
+//animation
+import { motion } from "framer-motion";
+
+export const HeaderNav = styled(motion.div)`
   height: 0px;
   width: 100%;
   position: absolute;
@@ -14,6 +17,7 @@ export const Logo = styled.div`
   a {
     font-size: 1.8rem;
     font-weight: 800;
+    color: #000;
     color: ${(props) => props.theme.text};
   }
   span {
