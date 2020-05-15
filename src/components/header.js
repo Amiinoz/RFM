@@ -2,6 +2,7 @@
 // # 2
 import React, { useEffect } from "react";
 import { Link } from "gatsby";
+import { logo } from "../assets/svg/logo.svg";
 
 // styled components
 import { HeaderNav, Logo, Menu } from "../styles/headerStyles";
@@ -39,9 +40,11 @@ const Header = () => {
         {/* {console.log(currentTheme)} */}
         <Flex spaceBetween noHeight>
           <Logo>
-            <Link to="/">PORT</Link>
-            <span onClick={toggleTheme}></span>
-            <Link to="/">O</Link>
+            <Link to="/">
+              <span onClick={toggleTheme}>
+                <img src={require("../assets/svg/logo.svg")} />
+              </span>
+            </Link>
           </Logo>
           <Menu>
             <button>
