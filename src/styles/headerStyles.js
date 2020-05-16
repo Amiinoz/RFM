@@ -21,17 +21,16 @@ export const Logo = styled.div`
     color: ${(props) => props.theme.text};
   }
   span {
-    // height: 1rem;
-    // width: 1rem;
+    height: 1rem;
+    width: 1rem;
     // background: ${(props) => props.theme.red};
-    // margin: 0 4px;
-    // border-radius: 100%;
-    // display: inline-block;
-    // position: relative;
-    // bottom: 2px;
+    margin: 0 4px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
     img {
       width: 45px;
-      // length: 24px;
     }
   }
 `;
@@ -49,8 +48,8 @@ export const Menu = styled.div`
       width: 30px;
       height: 2px;
       display: block;
-      background: ${(props) => props.theme.text};
-      margin: 4px;
+      //background: ${(props) => props.theme.text};
+      margin: 8px;
     }
   }
 `;

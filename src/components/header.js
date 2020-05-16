@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import { logo } from "../assets/svg/logo.svg";
+import { humbergerMenu } from "../assets/svg/humbergerMenu.svg";
 
 // styled components
 import { HeaderNav, Logo, Menu } from "../styles/headerStyles";
@@ -48,9 +49,9 @@ const Header = () => {
           </Logo>
           <Menu>
             <button>
-              <span></span>
-              <span></span>
-              <span></span>
+              <span>
+                <img src={require("../assets/svg/humbergerMenu.svg")} />
+              </span>
             </button>
           </Menu>
         </Flex>
